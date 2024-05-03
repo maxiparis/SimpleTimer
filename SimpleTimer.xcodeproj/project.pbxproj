@@ -58,13 +58,37 @@
 			children = (
 				B20863072BE5397800507056 /* AppDelegate.swift */,
 				B20863092BE5397800507056 /* SceneDelegate.swift */,
-				B208630B2BE5397800507056 /* ViewController.swift */,
-				B208630D2BE5397800507056 /* Main.storyboard */,
+				B208631B2BE539B000507056 /* View */,
+				B208631E2BE539DD00507056 /* Model */,
+				B208631C2BE539B700507056 /* Controller */,
 				B20863102BE5397A00507056 /* Assets.xcassets */,
 				B20863122BE5397A00507056 /* LaunchScreen.storyboard */,
 				B20863152BE5397A00507056 /* Info.plist */,
 			);
 			path = SimpleTimer;
+			sourceTree = "<group>";
+		};
+		B208631B2BE539B000507056 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B208630D2BE5397800507056 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B208631C2BE539B700507056 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B208630B2BE5397800507056 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B208631E2BE539DD00507056 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +319,7 @@
 				DEVELOPMENT_TEAM = K3XPBR5KT4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleTimer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Timer";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,6 +348,7 @@
 				DEVELOPMENT_TEAM = K3XPBR5KT4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleTimer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Timer";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
