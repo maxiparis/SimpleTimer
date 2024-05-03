@@ -8,7 +8,7 @@
 import UIKit
 import RealTimePicker
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var timerName: UITextField!
     @IBOutlet weak var subView: UIView!
@@ -30,17 +30,24 @@ class ViewController: UIViewController {
         return view
     }()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        timerName.delegate = self
         setupViews()
         timePicker.onNumberTimePicked = { pickedHour, pickedMinute in
             self.hour = pickedHour
             self.minute = pickedMinute
         }
+        initializeHideKeyboard()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     private func setupViews() {
-//        subView.addSubview(timePicker)
         view.addSubview(timePicker)
         timePicker.translatesAutoresizingMaskIntoConstraints = false
         timePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -51,5 +58,22 @@ class ViewController: UIViewController {
     @IBAction func startPressed(_ sender: UIButton) {
         print("hour: \(hour), minute: \(minute)")
     }
+    
+    func initializeHideKeyboard(){
+             //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+             let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+                 target: self,
+                 action: #selector(dismissMyKeyboard)
+             )
+             //Add this tap gesture recognizer to the parent view
+             view.addGestureRecognizer(tap)
+         }
+    
+     @objc func dismissMyKeyboard(){
+         //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
+         //In short- Dismiss the active keyboard.
+         view.endEditing(true)
+     }
+
 }
 
