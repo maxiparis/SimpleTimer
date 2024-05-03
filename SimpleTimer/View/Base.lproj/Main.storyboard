@@ -45,6 +45,9 @@
                                         <color key="tintColor" name="redColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Start Timer"/>
+                                        <connections>
+                                            <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3N8-AB-5hB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,7 +78,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="startTimerButton" destination="vU7-El-HAy" id="Ifi-Y5-Zyc"/>
                         <outlet property="subView" destination="EDD-OR-DlK" id="qfI-23-AZh"/>
+                        <outlet property="timerName" destination="Ubq-ef-y9s" id="6GF-vc-WG4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

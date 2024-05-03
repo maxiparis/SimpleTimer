@@ -10,7 +10,13 @@ import RealTimePicker
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var timerName: UITextField!
     @IBOutlet weak var subView: UIView!
+    @IBOutlet weak var startTimerButton: UIButton!
+    
+    var hour = 0
+    var minute = 0
+    
     private var timePicker: RealTimePickerView = {
         let view = RealTimePickerView(format: .h24)
         view.showUnitSeparator = true
@@ -27,6 +33,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        timePicker.onNumberTimePicked = { pickedHour, pickedMinute in
+            self.hour = pickedHour
+            self.minute = pickedMinute
+        }
     }
     
     private func setupViews() {
@@ -38,5 +48,8 @@ class ViewController: UIViewController {
         timePicker.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
     }
 
+    @IBAction func startPressed(_ sender: UIButton) {
+        print("hour: \(hour), minute: \(minute)")
+    }
 }
 
