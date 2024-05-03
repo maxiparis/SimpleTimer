@@ -74,6 +74,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
          //In short- Dismiss the active keyboard.
          view.endEditing(true)
      }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destineVC = segue.destination as! TimerStartViewController
+        destineVC.hour = self.hour
+        destineVC.minute = self.minute
+        destineVC.name = timerName.text ?? "Timer"
+    }
 
 }
 

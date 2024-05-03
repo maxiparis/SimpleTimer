@@ -14,6 +14,7 @@
 		B208630F2BE5397800507056 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B208630E2BE5397800507056 /* Base */; };
 		B20863112BE5397A00507056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20863102BE5397A00507056 /* Assets.xcassets */; };
 		B20863142BE5397A00507056 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B20863132BE5397A00507056 /* Base */; };
+		B20863202BE5543E00507056 /* TimerStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208631F2BE5543E00507056 /* TimerStartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B20863102BE5397A00507056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B20863132BE5397A00507056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B20863152BE5397A00507056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B208631F2BE5543E00507056 /* TimerStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStartViewController.swift; sourceTree = "<group>"; };
 		E5BA2E2498E6CD5DDF446BA8 /* Pods-SimpleTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTimer.release.xcconfig"; path = "Target Support Files/Pods-SimpleTimer/Pods-SimpleTimer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +50,6 @@
 				A620B154D8BC2CF7835700A9 /* Pods-SimpleTimer.debug.xcconfig */,
 				E5BA2E2498E6CD5DDF446BA8 /* Pods-SimpleTimer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				B208630B2BE5397800507056 /* ViewController.swift */,
+				B208631F2BE5543E00507056 /* TimerStartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,6 +218,7 @@
 				B208630C2BE5397800507056 /* ViewController.swift in Sources */,
 				B20863082BE5397800507056 /* AppDelegate.swift in Sources */,
 				B208630A2BE5397800507056 /* SceneDelegate.swift in Sources */,
+				B20863202BE5543E00507056 /* TimerStartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
