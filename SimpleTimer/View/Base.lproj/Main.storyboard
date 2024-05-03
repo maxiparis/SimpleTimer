@@ -74,6 +74,9 @@
                             <constraint firstItem="2NG-Ga-9zt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="p5z-Q1-rtC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="subView" destination="EDD-OR-DlK" id="qfI-23-AZh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +86,7 @@
     <resources>
         <image name="mainBG" width="4480" height="6720"/>
         <namedColor name="redColor">
-            <color red="0.7925226688" green="0.001213150681" blue="0.35318914060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.7929999828338623" green="0.0010000000474974513" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
