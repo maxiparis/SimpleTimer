@@ -1,0 +1,16 @@
+PODS:
+  - RealTimePicker (0.0.6)
+
+DEPENDENCIES:
+  - RealTimePicker (= 0.0.6)
+
+SPEC REPOS:
+  trunk:
+    - RealTimePicker
+
+SPEC CHECKSUMS:
+  RealTimePicker: 868a116f8f147849adc5e25cb3a1c4632884e0d7
+
+PODFILE CHECKSUM: bcadbbdc39cd35411ff95a094987c8e6e1f705fb
+
+COCOAPODS: 1.15.2

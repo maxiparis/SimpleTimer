@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09169F2DC24A97DC46ED3295 /* libPods-SimpleTimer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA2FC786FE10637B307DA7C /* libPods-SimpleTimer.a */; };
 		B20863082BE5397800507056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20863072BE5397800507056 /* AppDelegate.swift */; };
 		B208630A2BE5397800507056 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20863092BE5397800507056 /* SceneDelegate.swift */; };
 		B208630C2BE5397800507056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208630B2BE5397800507056 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BA2FC786FE10637B307DA7C /* libPods-SimpleTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A620B154D8BC2CF7835700A9 /* Pods-SimpleTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTimer.debug.xcconfig"; path = "Target Support Files/Pods-SimpleTimer/Pods-SimpleTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		B20863042BE5397800507056 /* SimpleTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20863072BE5397800507056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B20863092BE5397800507056 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		B20863102BE5397A00507056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B20863132BE5397A00507056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B20863152BE5397A00507056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5BA2E2498E6CD5DDF446BA8 /* Pods-SimpleTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTimer.release.xcconfig"; path = "Target Support Files/Pods-SimpleTimer/Pods-SimpleTimer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09169F2DC24A97DC46ED3295 /* libPods-SimpleTimer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA32453A1006548BE33681BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A620B154D8BC2CF7835700A9 /* Pods-SimpleTimer.debug.xcconfig */,
+				E5BA2E2498E6CD5DDF446BA8 /* Pods-SimpleTimer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B20862FB2BE5397800507056 = {
 			isa = PBXGroup;
 			children = (
 				B20863062BE5397800507056 /* SimpleTimer */,
 				B20863052BE5397800507056 /* Products */,
+				AA32453A1006548BE33681BC /* Pods */,
+				F324411A738B0E51914F4778 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +108,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F324411A738B0E51914F4778 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BA2FC786FE10637B307DA7C /* libPods-SimpleTimer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,6 +123,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B20863182BE5397A00507056 /* Build configuration list for PBXNativeTarget "SimpleTimer" */;
 			buildPhases = (
+				4AEFFBAB3F64E66E75A128B9 /* [CP] Check Pods Manifest.lock */,
 				B20863002BE5397800507056 /* Sources */,
 				B20863012BE5397800507056 /* Frameworks */,
 				B20863022BE5397800507056 /* Resources */,
@@ -156,6 +182,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AEFFBAB3F64E66E75A128B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleTimer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B20863002BE5397800507056 /* Sources */ = {
@@ -311,6 +362,7 @@
 		};
 		B20863192BE5397A00507056 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A620B154D8BC2CF7835700A9 /* Pods-SimpleTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -340,6 +392,7 @@
 		};
 		B208631A2BE5397A00507056 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5BA2E2498E6CD5DDF446BA8 /* Pods-SimpleTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

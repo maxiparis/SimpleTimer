@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of timer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-Ga-9zt">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of timer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-Ga-9zt">
                                 <rect key="frame" x="43" y="6779" width="323" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -28,12 +28,35 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBG" translatesAutoresizingMaskIntoConstraints="NO" id="Ecw-dd-0om">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                     </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Timer's name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-ef-y9s">
+                                        <rect key="frame" x="30" y="200" width="333" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="axB-BT-o00"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vU7-El-HAy">
+                                        <rect key="frame" x="106.66666666666669" y="672" width="180" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="Z1v-Sa-FSN"/>
+                                            <constraint firstAttribute="height" constant="50" id="oNB-o4-YIT"/>
+                                        </constraints>
+                                        <color key="tintColor" name="redColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start Timer"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="vU7-El-HAy" firstAttribute="centerX" secondItem="EDD-OR-DlK" secondAttribute="centerX" id="09O-na-btv"/>
                                     <constraint firstItem="Ecw-dd-0om" firstAttribute="leading" secondItem="EDD-OR-DlK" secondAttribute="leading" id="7Zi-yx-gSX"/>
                                     <constraint firstAttribute="bottom" secondItem="Ecw-dd-0om" secondAttribute="bottom" id="A9Z-Kw-eH4"/>
                                     <constraint firstItem="Ecw-dd-0om" firstAttribute="top" secondItem="EDD-OR-DlK" secondAttribute="top" id="B2E-pd-avK"/>
+                                    <constraint firstAttribute="bottom" secondItem="vU7-El-HAy" secondAttribute="bottom" constant="130" id="Qcv-na-5bP"/>
+                                    <constraint firstItem="Ubq-ef-y9s" firstAttribute="leading" relation="lessThanOrEqual" secondItem="EDD-OR-DlK" secondAttribute="leading" constant="30" id="VyS-AN-fiE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ubq-ef-y9s" secondAttribute="trailing" constant="30" id="Zrv-GI-tTL"/>
+                                    <constraint firstItem="Ubq-ef-y9s" firstAttribute="top" secondItem="EDD-OR-DlK" secondAttribute="top" constant="200" id="e9q-lU-klN"/>
                                     <constraint firstAttribute="trailing" secondItem="Ecw-dd-0om" secondAttribute="trailing" id="syX-of-TIZ"/>
                                 </constraints>
                             </view>
@@ -41,11 +64,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2NG-Ga-9zt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="6779" id="0aB-rV-aUi"/>
                             <constraint firstAttribute="bottom" secondItem="EDD-OR-DlK" secondAttribute="bottom" id="8gJ-PG-W5x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2NG-Ga-9zt" secondAttribute="trailing" constant="11" id="KTQ-ye-BIk"/>
                             <constraint firstItem="EDD-OR-DlK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="R3a-CM-aEp"/>
                             <constraint firstAttribute="trailing" secondItem="EDD-OR-DlK" secondAttribute="trailing" id="e2J-sg-HFQ"/>
                             <constraint firstItem="EDD-OR-DlK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ihw-Aw-FY0"/>
                             <constraint firstItem="EDD-OR-DlK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j1W-ki-C16"/>
+                            <constraint firstItem="2NG-Ga-9zt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="p5z-Q1-rtC"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -56,6 +82,9 @@
     </scenes>
     <resources>
         <image name="mainBG" width="4480" height="6720"/>
+        <namedColor name="redColor">
+            <color red="0.7925226688" green="0.001213150681" blue="0.35318914060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
