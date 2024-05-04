@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9lB-nB-Mhx">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -92,7 +92,6 @@
         <!--Timer Start View Controller-->
         <scene sceneID="Xlh-Vs-i3o">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SRQ-s7-zC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="NYK-kb-AYx" customClass="TimerStartViewController" customModule="SimpleTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hl7-Yb-det">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -175,6 +174,7 @@
                         <outlet property="timerName" destination="QOR-u6-hPr" id="KAf-Fo-FdQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRQ-s7-zC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2040" y="-27"/>
         </scene>
@@ -200,7 +200,7 @@
     <resources>
         <image name="mainBG" width="4480" height="6720"/>
         <namedColor name="blueApp">
-            <color red="0.0" green="0.6634607911" blue="0.8263885379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.66299998760223389" blue="0.82599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

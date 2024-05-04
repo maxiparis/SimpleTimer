@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import SRCountdownTimer
 
-class TimerStartViewController: UIViewController {
+class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
     var hour = 0
     var minute = 0
     var name = ""
+    var circleTimer = SRCountdownTimer()
 
     @IBOutlet weak var timerName: UILabel!
     @IBOutlet weak var pauseButton: UIButton!
@@ -23,5 +25,19 @@ class TimerStartViewController: UIViewController {
         timerName.text = name
         pauseButton.tintColor = UIColor(named: "greenApp")
         stopButton.tintColor = UIColor(named: "redApp")
+        insertTimer()
+        circleTimer.start(beginingValue: 50)
+    }
+    
+    func insertTimer(){
+        view.addSubview(circleTimer)
+        circleTimer.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+                    // Example constraints: center the view horizontally and vertically, and set width and height
+            circleTimer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            circleTimer.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            circleTimer.widthAnchor.constraint(equalToConstant: 300),
+            circleTimer.heightAnchor.constraint(equalToConstant: 300)
+        ])
     }
 }

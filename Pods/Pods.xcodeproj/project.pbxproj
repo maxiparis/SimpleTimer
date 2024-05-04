@@ -7,44 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EAF32B2C1ED4E7C4E15A077D3C5A4C5 /* Pods-SimpleTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E43FB4F4763C3611D7D2AE1426BE3C54 /* Pods-SimpleTimer-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		524856759B01724A47AC2255F207140C /* RealTimePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E068F6618C0C81E2418CDB3237C1B6A /* RealTimePicker-dummy.m */; };
-		737FDE0606E4BA07450036F28076A920 /* RealTimePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE64D6196D79C295366012611F994DF7 /* RealTimePicker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9B1D89637DF4DD9786DF2E539670B41E /* RealTimePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = B612F2EED9FA31990A4E165910E872B4 /* RealTimePicker.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C7CF36CE3B0197E25E88802672E69D51 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E17716E5F7B99DA1BF64029E6699D /* Extensions.swift */; };
-		DDF70E625D18D0FC503DEBEB97A7118D /* Pods-SimpleTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED025ABB9D61B5098CBA583C02180B7A /* Pods-SimpleTimer-dummy.m */; };
-		FA3A7B63E1CF6DC53A644C2107CCFB77 /* RealTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E153B9151B7C6991CDD8A73BADA9A706 /* RealTimePickerView.swift */; };
+		2F8643D5B536467E015C5CB7724AFF23 /* Pods-SimpleTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E43FB4F4763C3611D7D2AE1426BE3C54 /* Pods-SimpleTimer-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		385A8F55362E6B733536DA95D14BD62E /* SRCountdownTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D4E0903C04A0FADD272FE7448CAF07 /* SRCountdownTimer-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		524856759B01724A47AC2255F207140C /* RealTimePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C80DCFFB33939C8B3296B0B027393 /* RealTimePicker-dummy.m */; };
+		737FDE0606E4BA07450036F28076A920 /* RealTimePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF6376D3A99433FBF85494457A8E3AA1 /* RealTimePicker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9B1D89637DF4DD9786DF2E539670B41E /* RealTimePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0502F596FC304B2382A2F5F5DE21C5CF /* RealTimePicker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B309DA5C198080938C88B25AA6562D53 /* SRCountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D62C19F19D08C5EDD926BE8482C6B67 /* SRCountdownTimer.swift */; };
+		B846C22BE69D50D2B0D13DD628AAB8C0 /* SRCountdownTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E479F18A40E0F7413D0157179B552B2D /* SRCountdownTimer-dummy.m */; };
+		BD815199BEC2EA0FAF351A6ADBD053A5 /* Pods-SimpleTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED025ABB9D61B5098CBA583C02180B7A /* Pods-SimpleTimer-dummy.m */; };
+		C7CF36CE3B0197E25E88802672E69D51 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05C40B8E9CC82B40733983F62DE8546 /* Extensions.swift */; };
+		FA3A7B63E1CF6DC53A644C2107CCFB77 /* RealTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC32217D93D93821247EBA2D1093760 /* RealTimePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8A55E40B4471ED7D74F077008BE9F73A /* PBXContainerItemProxy */ = {
+		8296F5C73620904497015FA68B03E633 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F9E7F60EEE0EE17CD9C65398F78AF769;
 			remoteInfo = RealTimePicker;
 		};
+		859BCBFE5C2B3F4F93E4C402F06AA355 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A32423E0D02E0A41B4E900FB52F6D139;
+			remoteInfo = SRCountdownTimer;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0502F596FC304B2382A2F5F5DE21C5CF /* RealTimePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RealTimePicker.h; path = RealTimePicker/RealTimePicker.h; sourceTree = "<group>"; };
+		05ED1F7717A9A01D23F34AE4C2D031EA /* RealTimePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RealTimePicker.debug.xcconfig; sourceTree = "<group>"; };
 		06E1A60E8036EDC099CB02550539BAD6 /* Pods-SimpleTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		092AF4CDB2F4AECDBB0E81B77D526012 /* SRCountdownTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SRCountdownTimer-prefix.pch"; sourceTree = "<group>"; };
 		1034E63667BB83EFC7A096FAFBDF2C64 /* RealTimePicker */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = RealTimePicker; path = libRealTimePicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D32D25C31CEAE69CA9C7F9C0B7F7BF /* Pods-SimpleTimer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleTimer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		14DC9E50866A7FD5350B99F173F78F8B /* RealTimePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RealTimePicker.modulemap; sourceTree = "<group>"; };
-		2E42F53B1280D9B052C714D1C7BDA15E /* RealTimePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RealTimePicker.release.xcconfig; sourceTree = "<group>"; };
-		304E17716E5F7B99DA1BF64029E6699D /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = RealTimePicker/Extensions.swift; sourceTree = "<group>"; };
+		1522CAA40990F10495060A6203477EE2 /* RealTimePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RealTimePicker.release.xcconfig; sourceTree = "<group>"; };
+		27D4E0903C04A0FADD272FE7448CAF07 /* SRCountdownTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SRCountdownTimer-umbrella.h"; sourceTree = "<group>"; };
+		2D62C19F19D08C5EDD926BE8482C6B67 /* SRCountdownTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SRCountdownTimer.swift; path = SRCountdownTimer/SRCountdownTimer.swift; sourceTree = "<group>"; };
+		3BC32217D93D93821247EBA2D1093760 /* RealTimePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RealTimePickerView.swift; path = RealTimePicker/RealTimePickerView.swift; sourceTree = "<group>"; };
 		48BEA0A950418F068188D5CF98799078 /* Pods-SimpleTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleTimer.modulemap"; sourceTree = "<group>"; };
-		5E068F6618C0C81E2418CDB3237C1B6A /* RealTimePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RealTimePicker-dummy.m"; sourceTree = "<group>"; };
-		6375556A4C3CE226D52BB2BC4D10B154 /* RealTimePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RealTimePicker.debug.xcconfig; sourceTree = "<group>"; };
 		646FFFB21C192751BE4502A546321E74 /* Pods-SimpleTimer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleTimer-acknowledgements.plist"; sourceTree = "<group>"; };
+		6F827A3C8CDC4FEE9E7C3954DC47C862 /* RealTimePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealTimePicker-prefix.pch"; sourceTree = "<group>"; };
+		850B8F7A0E627AACE0E3BC6D96E0D57C /* SRCountdownTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SRCountdownTimer.debug.xcconfig; sourceTree = "<group>"; };
+		8E22AA3A49DCC60F5733818749BEE047 /* SRCountdownTimer */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SRCountdownTimer; path = libSRCountdownTimer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9844EBF20F32E3AE42F6F7899E43E7AE /* Pods-SimpleTimer */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-SimpleTimer"; path = "libPods-SimpleTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3205CD9FE23049F902363FEF87CC02C /* RealTimePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealTimePicker-prefix.pch"; sourceTree = "<group>"; };
-		B612F2EED9FA31990A4E165910E872B4 /* RealTimePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RealTimePicker.h; path = RealTimePicker/RealTimePicker.h; sourceTree = "<group>"; };
+		A45772CF5A932950B7953D4711226843 /* SRCountdownTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SRCountdownTimer.release.xcconfig; sourceTree = "<group>"; };
+		AEC1C5D69531DAD0CCF4F592A9E3AE61 /* RealTimePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RealTimePicker.modulemap; sourceTree = "<group>"; };
+		B05C40B8E9CC82B40733983F62DE8546 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = RealTimePicker/Extensions.swift; sourceTree = "<group>"; };
+		BF6376D3A99433FBF85494457A8E3AA1 /* RealTimePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealTimePicker-umbrella.h"; sourceTree = "<group>"; };
+		C46C80DCFFB33939C8B3296B0B027393 /* RealTimePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RealTimePicker-dummy.m"; sourceTree = "<group>"; };
+		D3E70ADA3DC0FA050E457EDE86151DC6 /* SRCountdownTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SRCountdownTimer.modulemap; sourceTree = "<group>"; };
 		DE285F358AED894062EC7E51DC265A7F /* Pods-SimpleTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleTimer.release.xcconfig"; sourceTree = "<group>"; };
-		DE64D6196D79C295366012611F994DF7 /* RealTimePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealTimePicker-umbrella.h"; sourceTree = "<group>"; };
-		E153B9151B7C6991CDD8A73BADA9A706 /* RealTimePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RealTimePickerView.swift; path = RealTimePicker/RealTimePickerView.swift; sourceTree = "<group>"; };
 		E43FB4F4763C3611D7D2AE1426BE3C54 /* Pods-SimpleTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleTimer-umbrella.h"; sourceTree = "<group>"; };
+		E479F18A40E0F7413D0157179B552B2D /* SRCountdownTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SRCountdownTimer-dummy.m"; sourceTree = "<group>"; };
 		ED025ABB9D61B5098CBA583C02180B7A /* Pods-SimpleTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleTimer-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +74,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		456F06E6AC9A4EE21166863A4D715BA2 /* Frameworks */ = {
+		4B91D1CC09A94A8A1DF6005D6B7BFE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8421CA8E45F26882041F2F35D74073C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,47 +91,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00C7070C19273B4A8B7260FA0162A146 /* RealTimePicker */ = {
+		3CBEC69E954FC46D2AAC8B131AF7DB9F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				304E17716E5F7B99DA1BF64029E6699D /* Extensions.swift */,
-				B612F2EED9FA31990A4E165910E872B4 /* RealTimePicker.h */,
-				E153B9151B7C6991CDD8A73BADA9A706 /* RealTimePickerView.swift */,
-				6D1130B1945E2C193C5960D557ACA429 /* Support Files */,
-			);
-			name = RealTimePicker;
-			path = RealTimePicker;
-			sourceTree = "<group>";
-		};
-		0E8EECA47F5F3EADA2B31603E68F5B09 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9844EBF20F32E3AE42F6F7899E43E7AE /* Pods-SimpleTimer */,
-				1034E63667BB83EFC7A096FAFBDF2C64 /* RealTimePicker */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6D1130B1945E2C193C5960D557ACA429 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				14DC9E50866A7FD5350B99F173F78F8B /* RealTimePicker.modulemap */,
-				5E068F6618C0C81E2418CDB3237C1B6A /* RealTimePicker-dummy.m */,
-				A3205CD9FE23049F902363FEF87CC02C /* RealTimePicker-prefix.pch */,
-				DE64D6196D79C295366012611F994DF7 /* RealTimePicker-umbrella.h */,
-				6375556A4C3CE226D52BB2BC4D10B154 /* RealTimePicker.debug.xcconfig */,
-				2E42F53B1280D9B052C714D1C7BDA15E /* RealTimePicker.release.xcconfig */,
+				AEC1C5D69531DAD0CCF4F592A9E3AE61 /* RealTimePicker.modulemap */,
+				C46C80DCFFB33939C8B3296B0B027393 /* RealTimePicker-dummy.m */,
+				6F827A3C8CDC4FEE9E7C3954DC47C862 /* RealTimePicker-prefix.pch */,
+				BF6376D3A99433FBF85494457A8E3AA1 /* RealTimePicker-umbrella.h */,
+				05ED1F7717A9A01D23F34AE4C2D031EA /* RealTimePicker.debug.xcconfig */,
+				1522CAA40990F10495060A6203477EE2 /* RealTimePicker.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/RealTimePicker";
 			sourceTree = "<group>";
 		};
-		880B0B03386760F1F50619616BE4D5D6 /* Pods */ = {
+		56E7D3AD7DCC7C85CC49B4A148C87B50 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				00C7070C19273B4A8B7260FA0162A146 /* RealTimePicker */,
+				8819BA1D353F403B9F1F5D9F0B9A37F2 /* RealTimePicker */,
+				7F31459ECD944364D5F281749483B683 /* SRCountdownTimer */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F31459ECD944364D5F281749483B683 /* SRCountdownTimer */ = {
+			isa = PBXGroup;
+			children = (
+				2D62C19F19D08C5EDD926BE8482C6B67 /* SRCountdownTimer.swift */,
+				AD814874F183C043D3564D2E2818C032 /* Support Files */,
+			);
+			name = SRCountdownTimer;
+			path = SRCountdownTimer;
+			sourceTree = "<group>";
+		};
+		8819BA1D353F403B9F1F5D9F0B9A37F2 /* RealTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				B05C40B8E9CC82B40733983F62DE8546 /* Extensions.swift */,
+				0502F596FC304B2382A2F5F5DE21C5CF /* RealTimePicker.h */,
+				3BC32217D93D93821247EBA2D1093760 /* RealTimePickerView.swift */,
+				3CBEC69E954FC46D2AAC8B131AF7DB9F /* Support Files */,
+			);
+			name = RealTimePicker;
+			path = RealTimePicker;
 			sourceTree = "<group>";
 		};
 		909787AA96A882E17A7238BAB2DA2DAE /* Targets Support Files */ = {
@@ -117,13 +144,37 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		AD814874F183C043D3564D2E2818C032 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3E70ADA3DC0FA050E457EDE86151DC6 /* SRCountdownTimer.modulemap */,
+				E479F18A40E0F7413D0157179B552B2D /* SRCountdownTimer-dummy.m */,
+				092AF4CDB2F4AECDBB0E81B77D526012 /* SRCountdownTimer-prefix.pch */,
+				27D4E0903C04A0FADD272FE7448CAF07 /* SRCountdownTimer-umbrella.h */,
+				850B8F7A0E627AACE0E3BC6D96E0D57C /* SRCountdownTimer.debug.xcconfig */,
+				A45772CF5A932950B7953D4711226843 /* SRCountdownTimer.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SRCountdownTimer";
+			sourceTree = "<group>";
+		};
+		BF4A706970F8BCF315F0A63DAB6B6220 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9844EBF20F32E3AE42F6F7899E43E7AE /* Pods-SimpleTimer */,
+				1034E63667BB83EFC7A096FAFBDF2C64 /* RealTimePicker */,
+				8E22AA3A49DCC60F5733818749BEE047 /* SRCountdownTimer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				880B0B03386760F1F50619616BE4D5D6 /* Pods */,
-				0E8EECA47F5F3EADA2B31603E68F5B09 /* Products */,
+				56E7D3AD7DCC7C85CC49B4A148C87B50 /* Pods */,
+				BF4A706970F8BCF315F0A63DAB6B6220 /* Products */,
 				909787AA96A882E17A7238BAB2DA2DAE /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -153,11 +204,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4E14EA0DD8AB769609AFE66BB8A1F0FC /* Headers */ = {
+		09B4AF2083B5415D1512D438C5B10900 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EAF32B2C1ED4E7C4E15A077D3C5A4C5 /* Pods-SimpleTimer-umbrella.h in Headers */,
+				385A8F55362E6B733536DA95D14BD62E /* SRCountdownTimer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDEDC622C52C2A73F9E6FFB7936DB2C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F8643D5B536467E015C5CB7724AFF23 /* Pods-SimpleTimer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,20 +234,39 @@
 /* Begin PBXNativeTarget section */
 		1D6C51723495AB0E73FEEC27DA797D98 /* Pods-SimpleTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DBE55BF50BEE2792508D417815F95DA /* Build configuration list for PBXNativeTarget "Pods-SimpleTimer" */;
+			buildConfigurationList = 7600803839FA124C610F0CC53F3AFA06 /* Build configuration list for PBXNativeTarget "Pods-SimpleTimer" */;
 			buildPhases = (
-				4E14EA0DD8AB769609AFE66BB8A1F0FC /* Headers */,
-				83E477BEF50E5F0FC7DBB386B5F9B952 /* Sources */,
-				456F06E6AC9A4EE21166863A4D715BA2 /* Frameworks */,
+				CBDEDC622C52C2A73F9E6FFB7936DB2C /* Headers */,
+				ACE5CD99BBF2A9F95A0938C6AA69594A /* Sources */,
+				4B91D1CC09A94A8A1DF6005D6B7BFE76 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EF06892A773F371A35867218631C5AD1 /* PBXTargetDependency */,
+				3DAF5785A946A83781235B62F8B7AC03 /* PBXTargetDependency */,
+				2EA6313F6D207684E4049F8220582FB6 /* PBXTargetDependency */,
 			);
 			name = "Pods-SimpleTimer";
 			productName = "Pods-SimpleTimer";
 			productReference = 9844EBF20F32E3AE42F6F7899E43E7AE /* Pods-SimpleTimer */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A32423E0D02E0A41B4E900FB52F6D139 /* SRCountdownTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F07E29154AF5C4D3781D5CF856CE3B39 /* Build configuration list for PBXNativeTarget "SRCountdownTimer" */;
+			buildPhases = (
+				09B4AF2083B5415D1512D438C5B10900 /* Headers */,
+				BB2AD7B5D16000E855A885B62FFFBE57 /* Sources */,
+				8421CA8E45F26882041F2F35D74073C2 /* Frameworks */,
+				710B2C14AEB17B819678F99D15ED4A26 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SRCountdownTimer;
+			productName = SRCountdownTimer;
+			productReference = 8E22AA3A49DCC60F5733818749BEE047 /* SRCountdownTimer */;
 			productType = "com.apple.product-type.library.static";
 		};
 		F9E7F60EEE0EE17CD9C65398F78AF769 /* RealTimePicker */ = {
@@ -227,12 +305,13 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 0E8EECA47F5F3EADA2B31603E68F5B09 /* Products */;
+			productRefGroup = BF4A706970F8BCF315F0A63DAB6B6220 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1D6C51723495AB0E73FEEC27DA797D98 /* Pods-SimpleTimer */,
 				F9E7F60EEE0EE17CD9C65398F78AF769 /* RealTimePicker */,
+				A32423E0D02E0A41B4E900FB52F6D139 /* SRCountdownTimer */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +341,30 @@
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/RealTimePicker/RealTimePicker.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/RealTimePicker/RealTimePicker-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
+		710B2C14AEB17B819678F99D15ED4A26 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/SRCountdownTimer/SRCountdownTimer.modulemap",
+				"${PODS_ROOT}/Headers/Public/SRCountdownTimer/SRCountdownTimer-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SRCountdownTimer-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SRCountdownTimer/SRCountdownTimer.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SRCountdownTimer/SRCountdownTimer-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -275,26 +378,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83E477BEF50E5F0FC7DBB386B5F9B952 /* Sources */ = {
+		ACE5CD99BBF2A9F95A0938C6AA69594A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF70E625D18D0FC503DEBEB97A7118D /* Pods-SimpleTimer-dummy.m in Sources */,
+				BD815199BEC2EA0FAF351A6ADBD053A5 /* Pods-SimpleTimer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2AD7B5D16000E855A885B62FFFBE57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B309DA5C198080938C88B25AA6562D53 /* SRCountdownTimer.swift in Sources */,
+				B846C22BE69D50D2B0D13DD628AAB8C0 /* SRCountdownTimer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EF06892A773F371A35867218631C5AD1 /* PBXTargetDependency */ = {
+		2EA6313F6D207684E4049F8220582FB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SRCountdownTimer;
+			target = A32423E0D02E0A41B4E900FB52F6D139 /* SRCountdownTimer */;
+			targetProxy = 859BCBFE5C2B3F4F93E4C402F06AA355 /* PBXContainerItemProxy */;
+		};
+		3DAF5785A946A83781235B62F8B7AC03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RealTimePicker;
 			target = F9E7F60EEE0EE17CD9C65398F78AF769 /* RealTimePicker */;
-			targetProxy = 8A55E40B4471ED7D74F077008BE9F73A /* PBXContainerItemProxy */;
+			targetProxy = 8296F5C73620904497015FA68B03E633 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2D9396E3369D9F802A84607610A1A458 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A45772CF5A932950B7953D4711226843 /* SRCountdownTimer.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SRCountdownTimer/SRCountdownTimer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MODULEMAP_FILE = Headers/Public/SRCountdownTimer/SRCountdownTimer.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SRCountdownTimer;
+				PRODUCT_NAME = SRCountdownTimer;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		6A5C026ED62BBFE3380CD257EEFAEB20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -361,32 +505,9 @@
 			};
 			name = Debug;
 		};
-		6B04792006F8D1D333B3F739B4152A5F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE285F358AED894062EC7E51DC265A7F /* Pods-SimpleTimer.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SimpleTimer/Pods-SimpleTimer.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		72C00578EA46EE333DC00015B85BC7A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6375556A4C3CE226D52BB2BC4D10B154 /* RealTimePicker.debug.xcconfig */;
+			baseConfigurationReference = 05ED1F7717A9A01D23F34AE4C2D031EA /* RealTimePicker.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -409,9 +530,32 @@
 			};
 			name = Debug;
 		};
+		8E8F90E36CFD4A4C28C18A24ED706FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE285F358AED894062EC7E51DC265A7F /* Pods-SimpleTimer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleTimer/Pods-SimpleTimer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		8FE0BAE53A6B0E077BB6C2E085628B4C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E42F53B1280D9B052C714D1C7BDA15E /* RealTimePicker.release.xcconfig */;
+			baseConfigurationReference = 1522CAA40990F10495060A6203477EE2 /* RealTimePicker.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -435,7 +579,7 @@
 			};
 			name = Release;
 		};
-		C2945E35461E1E4B0663BA74832A6E8A /* Debug */ = {
+		A3880D1BEB6C2ED05C38A2CC56F6BA9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06E1A60E8036EDC099CB02550539BAD6 /* Pods-SimpleTimer.debug.xcconfig */;
 			buildSettings = {
@@ -453,6 +597,31 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB4262D4B076FE7018EEEF412EE32578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 850B8F7A0E627AACE0E3BC6D96E0D57C /* SRCountdownTimer.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SRCountdownTimer/SRCountdownTimer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MODULEMAP_FILE = Headers/Public/SRCountdownTimer/SRCountdownTimer.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SRCountdownTimer;
+				PRODUCT_NAME = SRCountdownTimer;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -522,15 +691,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3DBE55BF50BEE2792508D417815F95DA /* Build configuration list for PBXNativeTarget "Pods-SimpleTimer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C2945E35461E1E4B0663BA74832A6E8A /* Debug */,
-				6B04792006F8D1D333B3F739B4152A5F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -540,11 +700,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7600803839FA124C610F0CC53F3AFA06 /* Build configuration list for PBXNativeTarget "Pods-SimpleTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3880D1BEB6C2ED05C38A2CC56F6BA9E /* Debug */,
+				8E8F90E36CFD4A4C28C18A24ED706FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2775398D783983CCCAE370560FDE8AF /* Build configuration list for PBXNativeTarget "RealTimePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				72C00578EA46EE333DC00015B85BC7A1 /* Debug */,
 				8FE0BAE53A6B0E077BB6C2E085628B4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F07E29154AF5C4D3781D5CF856CE3B39 /* Build configuration list for PBXNativeTarget "SRCountdownTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB4262D4B076FE7018EEEF412EE32578 /* Debug */,
+				2D9396E3369D9F802A84607610A1A458 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
