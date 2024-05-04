@@ -17,23 +17,38 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
     @IBOutlet weak var timerName: UILabel!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
-    @IBOutlet weak var timeLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timeLabel.text = "\(hour):\(minute)"
+//        timeLabel.text = "\(hour):\(minute)"
         timerName.text = name
         pauseButton.tintColor = UIColor(named: "greenApp")
         stopButton.tintColor = UIColor(named: "redApp")
+        configureCircleTimer()
         insertTimer()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         circleTimer.start(beginingValue: 50)
+    }
+    
+    func configureCircleTimer(){
+        circleTimer.labelFont = UIFont.systemFont(ofSize: 30)
+        circleTimer.labelTextColor = UIColor.white
+        circleTimer.timerFinishingText = "Done"
+        circleTimer.useMinutesAndSecondsRepresentation = true
+        circleTimer.backgroundColor = UIColor.clear
+//        circleTimer.lineColor = UIColor.yellow
+        circleTimer.lineColor = UIColor(named: "blueApp")!
+        circleTimer.lineWidth = 5
+        
     }
     
     func insertTimer(){
         view.addSubview(circleTimer)
         circleTimer.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-                    // Example constraints: center the view horizontally and vertically, and set width and height
             circleTimer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             circleTimer.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             circleTimer.widthAnchor.constraint(equalToConstant: 300),

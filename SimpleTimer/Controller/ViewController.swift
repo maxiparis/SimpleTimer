@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return view
     }()
 
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         timerName.delegate = self
