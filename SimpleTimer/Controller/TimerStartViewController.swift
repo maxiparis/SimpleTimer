@@ -9,42 +9,49 @@ import UIKit
 import SRCountdownTimer
 
 class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
+    //MARK: - Class Variables
+    
     var hour = 0
     var minute = 0
     var totalTime = 0
     var name = ""
-    var circleTimer = SRCountdownTimer()
+    
+    var circleTimer: SRCountdownTimer = {
+        var timer = SRCountdownTimer()
+        timer.labelFont = UIFont.systemFont(ofSize: 30)
+        timer.labelTextColor = UIColor.white
+        timer.timerFinishingText = "Done"
+        timer.useMinutesAndSecondsRepresentation = true
+        timer.backgroundColor = UIColor.clear
+        timer.lineColor = UIColor(named: "blueApp")!
+        timer.lineWidth = 5
+        return timer
+    }()
 
     @IBOutlet weak var timerName: UILabel!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
-    
+    //MARK: - Views Loaded and Appeared
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        timeLabel.text = "\(hour):\(minute)"
-        timerName.text = name
-        pauseButton.tintColor = UIColor(named: "greenApp")
-        stopButton.tintColor = UIColor(named: "redApp")
-        configureCircleTimer()
+        updateUI()
         insertTimer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        totalTime = hour*60 + minute
+        totalTime = (hour*60) + (minute)
         circleTimer.start(beginingValue: totalTime)
     }
     
-    func configureCircleTimer(){
-        circleTimer.labelFont = UIFont.systemFont(ofSize: 30)
-        circleTimer.labelTextColor = UIColor.white
-        circleTimer.timerFinishingText = "Done"
-        circleTimer.useMinutesAndSecondsRepresentation = true
-        circleTimer.backgroundColor = UIColor.clear
-        circleTimer.lineColor = UIColor(named: "blueApp")!
-        circleTimer.lineWidth = 5
-        
+    func updateUI(){
+        timerName.text = name
+        pauseButton.tintColor = UIColor(named: "greenApp")
+        stopButton.tintColor = UIColor(named: "redApp")
     }
+    
+    //MARK: - Timer Configurations
     
     func insertTimer(){
         view.addSubview(circleTimer)

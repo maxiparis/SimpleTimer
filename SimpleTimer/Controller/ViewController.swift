@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         timerName.delegate = self
         setupViews()
         timePicker.onNumberTimePicked = { pickedHour, pickedMinute in
+            print("hour: \(pickedHour), minute: \(pickedMinute)")
             self.hour = pickedHour
             self.minute = pickedMinute
         }

@@ -108,8 +108,8 @@ open class RealTimePickerView: UIView {
     private var minutes: [Int] = Array(0..<60)
     private var hourFormats: [HourFormat] = HourFormat.allCases
     
-    private var selectedHour: Int?
-    private var selectedMinute: Int?
+    private var selectedHour: Int? = 0
+    private var selectedMinute: Int? = 0
     private var selectedHourFormat: HourFormat?
     
     private var hourRows: Int = 10_000
