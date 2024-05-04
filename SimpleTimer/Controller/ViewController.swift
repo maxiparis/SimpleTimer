@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.formatLabelFont = UIFont.systemFont(ofSize: 20, weight: .semibold) // default size
         view.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         view.layer.cornerRadius = 24
-        view.showCurrentTime = true
+        view.showCurrentTime = false
         return view
     }()
 

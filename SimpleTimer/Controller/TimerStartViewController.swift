@@ -11,6 +11,7 @@ import SRCountdownTimer
 class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
     var hour = 0
     var minute = 0
+    var totalTime = 0
     var name = ""
     var circleTimer = SRCountdownTimer()
 
@@ -30,7 +31,8 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        circleTimer.start(beginingValue: 50)
+        totalTime = hour*60 + minute
+        circleTimer.start(beginingValue: totalTime)
     }
     
     func configureCircleTimer(){
@@ -39,7 +41,6 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
         circleTimer.timerFinishingText = "Done"
         circleTimer.useMinutesAndSecondsRepresentation = true
         circleTimer.backgroundColor = UIColor.clear
-//        circleTimer.lineColor = UIColor.yellow
         circleTimer.lineColor = UIColor(named: "blueApp")!
         circleTimer.lineWidth = 5
         
