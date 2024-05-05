@@ -42,7 +42,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Start Timer"/>
                                         <connections>
-                                            <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3N8-AB-5hB"/>
                                             <segue destination="NYK-kb-AYx" kind="show" identifier="goToTimer" id="hen-tt-TlZ"/>
                                         </connections>
                                     </button>

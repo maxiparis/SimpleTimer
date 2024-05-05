@@ -16,9 +16,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     let data = Data()
     
-    var hour = 0
-    var minute = 0
-    
     private var timePicker: RealTimePickerView = {
         let view = RealTimePickerView(format: .h24)
         view.showUnitSeparator = true
@@ -44,8 +41,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         initializeHideKeyboard()
     }
-    
-    
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -60,9 +56,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         timePicker.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
     }
 
-    @IBAction func startPressed(_ sender: UIButton) {
-        print("hour: \(hour), minute: \(minute)")
-    }
     
     func initializeHideKeyboard(){
              //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
@@ -82,6 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destineVC = segue.destination as! TimerStartViewController
+        data.name = timerName.text
         destineVC.data = self.data
     }
 
