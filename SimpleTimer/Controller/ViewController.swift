@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var startTimerButton: UIButton!
     
+    let data = Data()
+    
     var hour = 0
     var minute = 0
     
@@ -37,11 +39,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         setupViews()
         timePicker.onNumberTimePicked = { pickedHour, pickedMinute in
             print("hour: \(pickedHour), minute: \(pickedMinute)")
-            self.hour = pickedHour
-            self.minute = pickedMinute
+            self.data.hour = pickedHour
+            self.data.minute = pickedMinute
         }
         initializeHideKeyboard()
     }
+    
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -68,7 +72,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
              )
              //Add this tap gesture recognizer to the parent view
              view.addGestureRecognizer(tap)
-         }
+     }
     
      @objc func dismissMyKeyboard(){
          //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -78,9 +82,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destineVC = segue.destination as! TimerStartViewController
-        destineVC.hour = self.hour
-        destineVC.minute = self.minute
-        destineVC.name = timerName.text ?? "Timer"
+        destineVC.data = self.data
     }
 
 }

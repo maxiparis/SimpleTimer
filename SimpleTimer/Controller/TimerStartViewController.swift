@@ -11,10 +11,7 @@ import SRCountdownTimer
 class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
     //MARK: - Class Variables
     
-    var hour = 0
-    var minute = 0
-    var totalTime = 0
-    var name = ""
+    var data: Data?
     
     var circleTimer: SRCountdownTimer = {
         var timer = SRCountdownTimer()
@@ -41,12 +38,11 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        totalTime = (hour*60) + (minute)
-        circleTimer.start(beginingValue: totalTime)
+        circleTimer.start(beginingValue: data?.totalTimeInSeconds ?? 0)
     }
     
     func updateUI(){
-        timerName.text = name
+        timerName.text = data?.name
         pauseButton.tintColor = UIColor(named: "greenApp")
         stopButton.tintColor = UIColor(named: "redApp")
     }

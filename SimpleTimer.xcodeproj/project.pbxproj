@@ -15,6 +15,7 @@
 		B20863112BE5397A00507056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20863102BE5397A00507056 /* Assets.xcassets */; };
 		B20863142BE5397A00507056 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B20863132BE5397A00507056 /* Base */; };
 		B20863202BE5543E00507056 /* TimerStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208631F2BE5543E00507056 /* TimerStartViewController.swift */; };
+		B20863222BE702E700507056 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20863212BE702E700507056 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B20863132BE5397A00507056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B20863152BE5397A00507056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B208631F2BE5543E00507056 /* TimerStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStartViewController.swift; sourceTree = "<group>"; };
+		B20863212BE702E700507056 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E5BA2E2498E6CD5DDF446BA8 /* Pods-SimpleTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTimer.release.xcconfig"; path = "Target Support Files/Pods-SimpleTimer/Pods-SimpleTimer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		B208631E2BE539DD00507056 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B20863212BE702E700507056 /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B208630C2BE5397800507056 /* ViewController.swift in Sources */,
+				B20863222BE702E700507056 /* Data.swift in Sources */,
 				B20863082BE5397800507056 /* AppDelegate.swift in Sources */,
 				B208630A2BE5397800507056 /* SceneDelegate.swift in Sources */,
 				B20863202BE5543E00507056 /* TimerStartViewController.swift in Sources */,
