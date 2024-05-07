@@ -49,6 +49,11 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
     
     //MARK: - Timer Configurations
     
+    
+    @IBAction func stopPressed(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
     func insertTimer(){
         view.addSubview(circleTimer)
         circleTimer.translatesAutoresizingMaskIntoConstraints = false
@@ -57,6 +62,12 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
             circleTimer.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             circleTimer.widthAnchor.constraint(equalToConstant: 300),
             circleTimer.heightAnchor.constraint(equalToConstant: 300)
+        ])
+        
+        // Set constraints for the UILabel
+        NSLayoutConstraint.activate([
+            timerName.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            timerName.bottomAnchor.constraint(equalTo: circleTimer.topAnchor, constant: -10) // Adjust the constant as needed
         ])
     }
 }

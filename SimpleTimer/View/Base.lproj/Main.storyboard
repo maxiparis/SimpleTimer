@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9lB-nB-Mhx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -17,19 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of timer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-Ga-9zt">
-                                <rect key="frame" x="47" y="6779" width="352" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDD-OR-DlK">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBG" translatesAutoresizingMaskIntoConstraints="NO" id="Ecw-dd-0om">
                                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Timer's name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-ef-y9s">
-                                        <rect key="frame" x="64.666666666666686" y="128.66666666666666" width="301" height="40"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Timer's name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-ef-y9s">
+                                        <rect key="frame" x="64.666666666666686" y="118" width="301" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
@@ -42,7 +37,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Start Timer"/>
                                         <connections>
-                                            <segue destination="NYK-kb-AYx" kind="show" identifier="goToTimer" id="hen-tt-TlZ"/>
+                                            <segue destination="NYK-kb-AYx" kind="presentation" identifier="goToTimer" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="hen-tt-TlZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -60,16 +55,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2NG-Ga-9zt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="6779" id="0aB-rV-aUi"/>
                             <constraint firstAttribute="bottom" secondItem="EDD-OR-DlK" secondAttribute="bottom" id="8gJ-PG-W5x"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2NG-Ga-9zt" secondAttribute="trailing" constant="11" id="KTQ-ye-BIk"/>
                             <constraint firstItem="EDD-OR-DlK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="R3a-CM-aEp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vU7-El-HAy" secondAttribute="bottom" multiplier="1.1" id="YR9-JM-lMF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Ubq-ef-y9s" secondAttribute="top" multiplier="0.8" id="dlJ-yr-kIO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Ubq-ef-y9s" secondAttribute="top" multiplier="0.5" id="dlJ-yr-kIO"/>
                             <constraint firstAttribute="trailing" secondItem="EDD-OR-DlK" secondAttribute="trailing" id="e2J-sg-HFQ"/>
                             <constraint firstItem="EDD-OR-DlK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ihw-Aw-FY0"/>
                             <constraint firstItem="EDD-OR-DlK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j1W-ki-C16"/>
-                            <constraint firstItem="2NG-Ga-9zt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="p5z-Q1-rtC"/>
                             <constraint firstItem="vU7-El-HAy" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="ucN-8o-kuK"/>
                             <constraint firstItem="Ubq-ef-y9s" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.7" id="xbI-so-kPE"/>
                         </constraints>
@@ -100,7 +92,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tdH-m6-lSs">
-                                        <rect key="frame" x="43" y="766.33333333333337" width="344" height="50"/>
+                                        <rect key="frame" x="43" y="797.33333333333337" width="344" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCe-Jg-txo">
                                                 <rect key="frame" x="0.0" y="0.0" width="162" height="50"/>
@@ -116,6 +108,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Stop"/>
                                                 <connections>
                                                     <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k7Z-Nr-hpq"/>
+                                                    <action selector="stopPressed:" destination="NYK-kb-AYx" eventType="touchUpInside" id="Oer-c6-Bb8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -123,9 +116,9 @@
                                             <constraint firstAttribute="height" constant="50" id="B8b-eS-WKk"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOR-u6-hPr">
-                                        <rect key="frame" x="179.33333333333334" y="154.66666666666666" width="71.666666666666657" height="33.666666666666657"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QOR-u6-hPr">
+                                        <rect key="frame" x="180" y="146" width="71.666666666666657" height="33.666666666666657"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -133,8 +126,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="nZt-2R-idx" secondAttribute="bottom" id="2JS-z7-HeO"/>
+                                    <constraint firstItem="QOR-u6-hPr" firstAttribute="top" secondItem="Xnf-k5-VUP" secondAttribute="topMargin" constant="1" id="75c-C5-D6I"/>
                                     <constraint firstAttribute="trailing" secondItem="nZt-2R-idx" secondAttribute="trailing" id="E6k-b7-5Ht"/>
                                     <constraint firstItem="tdH-m6-lSs" firstAttribute="centerX" secondItem="Xnf-k5-VUP" secondAttribute="centerX" id="ZKo-BN-hk7"/>
+                                    <constraint firstItem="QOR-u6-hPr" firstAttribute="width" relation="lessThanOrEqual" secondItem="Xnf-k5-VUP" secondAttribute="width" multiplier="0.9" id="mCk-we-VfP"/>
                                     <constraint firstItem="nZt-2R-idx" firstAttribute="top" secondItem="Xnf-k5-VUP" secondAttribute="top" id="nnh-wi-gmI"/>
                                     <constraint firstItem="nZt-2R-idx" firstAttribute="leading" secondItem="Xnf-k5-VUP" secondAttribute="leading" id="rbZ-B0-61X"/>
                                     <constraint firstItem="QOR-u6-hPr" firstAttribute="centerX" secondItem="Xnf-k5-VUP" secondAttribute="centerX" id="wFb-BG-ntt"/>
@@ -147,7 +142,6 @@
                             <constraint firstAttribute="bottom" secondItem="Xnf-k5-VUP" secondAttribute="bottom" id="1IM-EC-zG3"/>
                             <constraint firstItem="6xl-1j-tbI" firstAttribute="bottom" secondItem="tdH-m6-lSs" secondAttribute="bottom" multiplier="1.1" id="AaS-9C-gzP"/>
                             <constraint firstItem="Xnf-k5-VUP" firstAttribute="top" secondItem="Hl7-Yb-det" secondAttribute="top" id="UPa-75-3df"/>
-                            <constraint firstItem="QOR-u6-hPr" firstAttribute="top" secondItem="6xl-1j-tbI" secondAttribute="top" multiplier="1.5" id="abx-1D-wuX"/>
                             <constraint firstAttribute="trailing" secondItem="Xnf-k5-VUP" secondAttribute="trailing" id="kfo-ZB-h0U"/>
                             <constraint firstItem="Xnf-k5-VUP" firstAttribute="leading" secondItem="Hl7-Yb-det" secondAttribute="leading" id="lYg-UE-eya"/>
                             <constraint firstItem="tdH-m6-lSs" firstAttribute="width" secondItem="6xl-1j-tbI" secondAttribute="width" multiplier="0.8" id="lct-71-hOL"/>
@@ -163,24 +157,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRQ-s7-zC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2040" y="-27"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Cfa-bL-gyN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9lB-nB-Mhx" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zgc-KC-rAE">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cqa-Yi-ReI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rfW-gj-4Pv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
