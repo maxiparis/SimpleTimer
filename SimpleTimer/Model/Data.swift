@@ -9,7 +9,7 @@ import Foundation
 
 class Data {
     //MARK: - Class variables
-
+    var paused: Bool
     var totalTimeInSeconds: Int?
     var hour: Int = 0 {
         didSet {
@@ -26,7 +26,7 @@ class Data {
     //MARK: - Initializer / Constructor
 
     init() {
-        
+        paused = false
     }
     
     //MARK: - Class methods

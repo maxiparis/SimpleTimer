@@ -9,9 +9,11 @@ import UIKit
 import SRCountdownTimer
 
 class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
+    
+    
     //MARK: - Class Variables
     
-    var data: Data?
+    var data: Data = Data()
     
     var circleTimer: SRCountdownTimer = {
         var timer = SRCountdownTimer()
@@ -39,21 +41,16 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        circleTimer.start(beginingValue: data?.totalTimeInSeconds ?? 0)
+        circleTimer.start(beginingValue: data.totalTimeInSeconds ?? 0)
     }
     
     func updateUI(){
-        timerName.text = data?.name
+        timerName.text = data.name
         pauseButton.tintColor = UIColor(named: "greenApp")
         stopButton.tintColor = UIColor(named: "redApp")
     }
     
     //MARK: - Timer Configurations
-    
-    
-    @IBAction func stopPressed(_ sender: UIButton) {
-        self.dismiss(animated: true)
-    }
     
     func insertTimer(){
         view.addSubview(circleTimer)
@@ -70,5 +67,26 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
             timerName.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             timerName.bottomAnchor.constraint(equalTo: circleTimer.topAnchor, constant: -10) // Adjust the constant as needed
         ])
+    }
+    
+    //MARK: - Buttons Pressed
+
+    @IBAction func stopPressed(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    
+    @IBAction func pausePressed(_ sender: UIButton) {
+        if (data.paused) {
+            // resume
+            circleTimer.resume()
+            pauseButton.setTitle("Pause", for: .normal)
+            data.paused = false
+        } else { //is not paused
+            //pause
+            circleTimer.pause()
+            pauseButton.setTitle("Resume", for: .normal)
+            data.paused = true
+        }
     }
 }

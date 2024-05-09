@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var timerName: UITextField!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var startTimerButton: UIButton!
+    @IBOutlet weak var alertLabel: UILabel!
+    @IBOutlet weak var hoursMinuteStack: UIStackView!
     
     let data = Data()
     
@@ -54,6 +56,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         timePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         timePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         timePicker.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
+        
+        
+        alertLabel.isHidden = true
+        NSLayoutConstraint.activate([
+            hoursMinuteStack.bottomAnchor.constraint(equalTo: timePicker.topAnchor, constant: -10),
+            hoursMinuteStack.widthAnchor.constraint(equalTo: timePicker.widthAnchor, multiplier: 0.75)
+        ])
     }
 
     
@@ -79,5 +88,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         destineVC.data = self.data
     }
 
+    @IBAction func startTimerPressed(_ sender: UIButton) {
+        if (data.hour == 0 && data.minute == 0){
+            alertLabel.isHidden = false
+        } else {
+            alertLabel.isHidden = true
+            performSegue(withIdentifier: "goToTimer", sender: self)
+        }
+    }
 }
 

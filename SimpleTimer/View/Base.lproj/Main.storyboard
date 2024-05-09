@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,9 +24,9 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBG" translatesAutoresizingMaskIntoConstraints="NO" id="Ecw-dd-0om">
                                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Timer's name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-ef-y9s">
-                                        <rect key="frame" x="64.666666666666686" y="118" width="301" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Timer Label" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-ef-y9s">
+                                        <rect key="frame" x="64.666666666666686" y="118" width="301" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vU7-El-HAy">
@@ -37,9 +38,40 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Start Timer"/>
                                         <connections>
-                                            <segue destination="NYK-kb-AYx" kind="presentation" identifier="goToTimer" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="hen-tt-TlZ"/>
+                                            <action selector="startTimerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nFD-yC-9Ri"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0kM-XQ-tWA">
+                                        <rect key="frame" x="169" y="289" width="92" height="43.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4d-yv-BEp">
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" systemColor="systemPinkColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nX5-aQ-5vl">
+                                                <rect key="frame" x="0.0" y="23" width="92" height="20.333333333333329"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hrs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-gW-yLm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRO-ht-xvF">
+                                                        <rect key="frame" x="50" y="0.0" width="42" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nX5-aQ-5vl" firstAttribute="centerX" secondItem="0kM-XQ-tWA" secondAttribute="centerX" id="ZGh-pV-1Hz"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -47,6 +79,7 @@
                                     <constraint firstItem="Ecw-dd-0om" firstAttribute="leading" secondItem="EDD-OR-DlK" secondAttribute="leading" id="7Zi-yx-gSX"/>
                                     <constraint firstAttribute="bottom" secondItem="Ecw-dd-0om" secondAttribute="bottom" id="A9Z-Kw-eH4"/>
                                     <constraint firstItem="Ecw-dd-0om" firstAttribute="top" secondItem="EDD-OR-DlK" secondAttribute="top" id="B2E-pd-avK"/>
+                                    <constraint firstItem="0kM-XQ-tWA" firstAttribute="centerX" secondItem="EDD-OR-DlK" secondAttribute="centerX" id="MfK-A9-7cT"/>
                                     <constraint firstItem="Ubq-ef-y9s" firstAttribute="centerX" secondItem="EDD-OR-DlK" secondAttribute="centerX" id="OLJ-ra-Vaw"/>
                                     <constraint firstAttribute="trailing" secondItem="Ecw-dd-0om" secondAttribute="trailing" id="syX-of-TIZ"/>
                                 </constraints>
@@ -68,14 +101,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="H60-Dt-INb"/>
                     <connections>
+                        <outlet property="alertLabel" destination="y4d-yv-BEp" id="Sye-e6-MGv"/>
+                        <outlet property="hoursMinuteStack" destination="0kM-XQ-tWA" id="hUN-L2-x61"/>
                         <outlet property="startTimerButton" destination="vU7-El-HAy" id="Ifi-Y5-Zyc"/>
                         <outlet property="subView" destination="EDD-OR-DlK" id="qfI-23-AZh"/>
                         <outlet property="timerName" destination="Ubq-ef-y9s" id="6GF-vc-WG4"/>
+                        <segue destination="NYK-kb-AYx" kind="presentation" identifier="goToTimer" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="aSu-DD-FRb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.4580152671756" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1038.1395348837209" y="-27.682403433476395"/>
         </scene>
         <!--Timer Start View Controller-->
         <scene sceneID="Xlh-Vs-i3o">
@@ -99,7 +135,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Pause"/>
                                                 <connections>
-                                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JXu-mq-puL"/>
+                                                    <action selector="pausePressed:" destination="NYK-kb-AYx" eventType="touchUpInside" id="39K-54-aXj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9b-Bb-C1Z">
@@ -107,8 +143,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Stop"/>
                                                 <connections>
-                                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k7Z-Nr-hpq"/>
-                                                    <action selector="stopPressed:" destination="NYK-kb-AYx" eventType="touchUpInside" id="Oer-c6-Bb8"/>
+                                                    <action selector="stopPressed:" destination="NYK-kb-AYx" eventType="touchUpInside" id="7Rb-D8-6RO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -166,6 +201,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
