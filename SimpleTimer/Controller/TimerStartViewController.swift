@@ -7,13 +7,18 @@
 
 import UIKit
 import SRCountdownTimer
+import UserNotifications
+import AudioToolbox
 
-class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
+
+class TimerStartViewController: UIViewController, SRCountdownTimerDelegate, UNUserNotificationCenterDelegate {
     
     
     //MARK: - Class Variables
     
     var data: Data = Data()
+    var start: Date? = nil
+    var end: Date? = nil
     
     var circleTimer: SRCountdownTimer = {
         var timer = SRCountdownTimer()
@@ -36,6 +41,8 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().delegate = self
+        circleTimer.delegate = self
         updateUI()
         insertTimer()
     }
@@ -69,6 +76,34 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
         ])
     }
     
+    
+    // Function to schedule a notification
+    func scheduleNotification() {
+        // Create content for the notification
+        let content = UNMutableNotificationContent()
+        content.title = "Timer Done"
+        content.body = "Your timer \(data.name!) has finished!"
+        content.sound = .default
+
+        // Set the notification to trigger now
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+
+        // Create a unique identifier for the notification
+        let identifier = "TimerDoneNotification"
+
+        // Create a notification request
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+
+        // Schedule the notification
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error scheduling notification: \(error)")
+            } else {
+                print("Notification scheduled successfully")
+            }
+        }
+    }
+    
     //MARK: - Buttons Pressed
 
     @IBAction func stopPressed(_ sender: UIButton) {
@@ -90,5 +125,17 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
             pauseButton.tintColor = UIColor(named: "blueApp")
             data.paused = true
         }
+    }
+    
+    func timerDidEnd(sender: SRCountdownTimer, elapsedTime: TimeInterval) {
+        print("timer ended")
+        scheduleNotification()
+    }
+    
+    // Called when a notification is about to be presented to the user while the app is in the foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Handle how the notification should be presented
+        // For example, you can specify to display an alert and play a sound
+        completionHandler([.list, .sound, .banner])
     }
 }

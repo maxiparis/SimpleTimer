@@ -47,6 +47,7 @@ public class SRCountdownTimer: UIView {
     // use minutes and seconds for presentation
     public var useMinutesAndSecondsRepresentation = false
     public var moveClockWise = true
+    public var timeInSeconds = 0
 
     private var timer: Timer?
     private var beginingValue: Int = 1
@@ -70,7 +71,7 @@ public class SRCountdownTimer: UIView {
 
         return label
     }()
-    private var currentCounterValue: Int = 0 {
+    public var currentCounterValue: Int = 0 {
         didSet {
             if !isLabelHidden {
                 if let text = timerFinishingText, currentCounterValue == 0 {
@@ -200,7 +201,6 @@ public class SRCountdownTimer: UIView {
     public func end() {
         self.currentCounterValue = 0
         timer?.invalidate()
-        
         delegate?.timerDidEnd?(sender: self, elapsedTime: elapsedTime)
     }
     
@@ -208,6 +208,7 @@ public class SRCountdownTimer: UIView {
      * Calculate value in minutes and seconds and return it as String
      */
     private func getMinutesAndSeconds(remainingSeconds: Int) -> (String) {
+        
         var remainingSecondsCopy = remainingSeconds
         let hours: Int = remainingSecondsCopy / 3600
         remainingSecondsCopy %= 3600
@@ -218,13 +219,13 @@ public class SRCountdownTimer: UIView {
         let hourString = hours < 10 ? "0" + hours.description : hours.description
         let minuteString = minutes < 10 ? "0" + minutes.description : minutes.description
         let secondString = seconds < 10 ? "0" + seconds.description : seconds.description
-        return hourString + ":" + minuteString + ":" + secondString
+        return hours > 0 ? hourString + ":" + minuteString + ":" + secondString : minuteString + ":" + secondString
     }
 
     // MARK: Private methods
     @objc private func timerFired(_ timer: Timer) {
         elapsedTime += fireInterval
-
+        
         if elapsedTime <= totalTime {
             setNeedsDisplay()
 

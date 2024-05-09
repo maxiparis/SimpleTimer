@@ -42,7 +42,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.data.minute = pickedMinute
         }
         initializeHideKeyboard()
+        requestAuthorizationNotifications()
     }
+    
+    func requestAuthorizationNotifications() {
+        // Request authorization for notifications
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+                if granted {
+                    print("Notification authorization granted")
+                } else {
+                    print("Notification authorization denied")
+                }
+            }
+    }
+
 
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
