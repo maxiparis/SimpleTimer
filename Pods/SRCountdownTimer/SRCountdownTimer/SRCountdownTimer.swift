@@ -208,10 +208,17 @@ public class SRCountdownTimer: UIView {
      * Calculate value in minutes and seconds and return it as String
      */
     private func getMinutesAndSeconds(remainingSeconds: Int) -> (String) {
-        let minutes = remainingSeconds / 60
-        let seconds = remainingSeconds - minutes * 60
+        var remainingSecondsCopy = remainingSeconds
+        let hours: Int = remainingSecondsCopy / 3600
+        remainingSecondsCopy %= 3600
+        let minutes: Int = remainingSecondsCopy / 60
+        remainingSecondsCopy %= 60
+        let seconds: Int = remainingSecondsCopy
+        
+        let hourString = hours < 10 ? "0" + hours.description : hours.description
+        let minuteString = minutes < 10 ? "0" + minutes.description : minutes.description
         let secondString = seconds < 10 ? "0" + seconds.description : seconds.description
-        return minutes.description + ":" + secondString
+        return hourString + ":" + minuteString + ":" + secondString
     }
 
     // MARK: Private methods

@@ -32,7 +32,7 @@ class Data {
     //MARK: - Class methods
     
     func setTotalTimeInSeconds() {
-        totalTimeInSeconds = hour*60 + minute
+        totalTimeInSeconds = hour*60*60 + minute*60
     }
        
     

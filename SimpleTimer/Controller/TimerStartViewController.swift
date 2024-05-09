@@ -15,7 +15,8 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
     
     var circleTimer: SRCountdownTimer = {
         var timer = SRCountdownTimer()
-        timer.labelFont = UIFont.systemFont(ofSize: 30)
+//        timer.labelFont = UIFont(name: "CourierNewPSMT", size: 30.0) // monospace
+        timer.labelFont = UIFont.systemFont(ofSize: 30.0)
         timer.labelTextColor = UIColor.white
         timer.timerFinishingText = "Done"
         timer.useMinutesAndSecondsRepresentation = true
