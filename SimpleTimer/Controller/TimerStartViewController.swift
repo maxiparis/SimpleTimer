@@ -13,7 +13,6 @@ import AudioToolbox
 
 class TimerStartViewController: UIViewController, SRCountdownTimerDelegate, UNUserNotificationCenterDelegate {
     
-    
     //MARK: - Class Variables
     
     var data: Data = Data()
@@ -22,7 +21,6 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate, UNUs
     
     var circleTimer: SRCountdownTimer = {
         var timer = SRCountdownTimer()
-//        timer.labelFont = UIFont(name: "CourierNewPSMT", size: 30.0) // monospace
         timer.labelFont = UIFont.systemFont(ofSize: 30.0)
         timer.labelTextColor = UIColor.white
         timer.timerFinishingText = "Done"
@@ -39,12 +37,18 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate, UNUs
     
     //MARK: - Views Loaded and Appeared
 
+    deinit {
+        // Remove observers to prevent memory leaks
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UNUserNotificationCenter.current().delegate = self
         circleTimer.delegate = self
         updateUI()
         insertTimer()
+        addObservers()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -110,7 +114,6 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate, UNUs
         self.dismiss(animated: true)
     }
     
-    
     @IBAction func pausePressed(_ sender: UIButton) {
         if (data.paused) {
             // resume
@@ -137,5 +140,26 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate, UNUs
         // Handle how the notification should be presented
         // For example, you can specify to display an alert and play a sound
         completionHandler([.list, .sound, .banner])
+    }
+    
+    //MARK: - BG/FG
+    func addObservers() {
+        // Add observers for app entering background and foreground
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
+    
+    // Called when the app enters the background
+    @objc func appDidEnterBackground() {
+        start = Date()
+        print("app entered background")
+    }
+
+    // Called when the app enters the foreground
+    @objc func appWillEnterForeground() {
+        end = Date()
+        let timeDifference = end!.timeIntervalSince(start!)
+        print("App will enter foreground")
+        circleTimer.start(beginingValue: circleTimer.currentCounterValue - Int(timeDifference))
     }
 }
