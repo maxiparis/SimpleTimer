@@ -81,11 +81,13 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate {
             // resume
             circleTimer.resume()
             pauseButton.setTitle("Pause", for: .normal)
+            pauseButton.tintColor = UIColor(named: "greenApp")
             data.paused = false
         } else { //is not paused
             //pause
             circleTimer.pause()
             pauseButton.setTitle("Resume", for: .normal)
+            pauseButton.tintColor = UIColor(named: "blueApp")
             data.paused = true
         }
     }
