@@ -71,6 +71,7 @@ public class SRCountdownTimer: UIView {
 
         return label
     }()
+    
     public var currentCounterValue: Int = 0 {
         didSet {
             if !isLabelHidden {
@@ -151,12 +152,12 @@ public class SRCountdownTimer: UIView {
      *   - beginingValue: Value to start countdown from.
      *   - interval: Interval between reducing the counter(1 second by default)
      */
-    public func start(beginingValue: Int, interval: TimeInterval = 1) {
+    public func start(beginingValue: Int, interval: TimeInterval = 1, elapsed: Int = 0, total: Int = 0) {
         self.beginingValue = beginingValue
         self.interval = interval
 
-        totalTime = TimeInterval(beginingValue) * interval
-        elapsedTime = 0
+        totalTime = total == 0 ? TimeInterval(beginingValue) * interval : TimeInterval(total)
+        elapsedTime = TimeInterval(elapsed)
         currentCounterValue = beginingValue
 
         timer?.invalidate()

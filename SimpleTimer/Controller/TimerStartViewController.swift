@@ -152,14 +152,21 @@ class TimerStartViewController: UIViewController, SRCountdownTimerDelegate, UNUs
     // Called when the app enters the background
     @objc func appDidEnterBackground() {
         start = Date()
-        print("app entered background")
+        print("- App entered background at \(start?.description ?? "") when timer had \(circleTimer.currentCounterValue) seconds left.")
     }
 
     // Called when the app enters the foreground
     @objc func appWillEnterForeground() {
         end = Date()
         let timeDifference = end!.timeIntervalSince(start!)
-        print("App will enter foreground")
-        circleTimer.start(beginingValue: circleTimer.currentCounterValue - Int(timeDifference))
+        print("* App will enter foreground at \(end?.description ?? "")")
+        print("* time difference = \(timeDifference.description) seconds")
+        print("* Starting timer again with \(circleTimer.currentCounterValue - Int(timeDifference)) seconds")
+        circleTimer.start(
+            beginingValue: data.totalTimeInSeconds!,
+            elapsed: data.totalTimeInSeconds! - circleTimer.currentCounterValue + Int(timeDifference),
+            total: data.totalTimeInSeconds!
+        )
+            
     }
 }
